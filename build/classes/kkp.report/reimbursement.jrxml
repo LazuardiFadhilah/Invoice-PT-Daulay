@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f03913b4-73e6-4ccd-bd4d-0f332aa8b33a">
+	<property name="ireport.zoom" value="2.143588810000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="19"/>
+	<parameter name="RMB01" class="java.lang.String"/>
+	<parameter name="RMB02" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     reimburse.`id_reimburse` AS reimburse_id_reimburse,
+     reimburse.`id_inv` AS reimburse_id_inv,
+     reimburse.`kegiatan` AS reimburse_kegiatan,
+     reimburse.`biaya` AS reimburse_biaya,
+     reimburse.`id_user` AS reimburse_id_user,
+     user.`id_user` AS user_id_user,
+     user.`nama_user` AS user_nama_user,
+     user.`username` AS user_username,
+     user.`password` AS user_password,
+     user.`no_telp` AS user_no_telp,
+     user.`jabatan` AS user_jabatan
+FROM
+     `reimburse` reimburse INNER JOIN `user` user ON reimburse.`id_user` = user.`id_user`
+WHERE
+     reimburse.id_inv = $P{RMB01} AND reimburse.id_user = $P{RMB02}]]>
+	</queryString>
+	<field name="reimburse_id_reimburse" class="java.lang.String"/>
+	<field name="reimburse_id_inv" class="java.lang.String"/>
+	<field name="reimburse_kegiatan" class="java.lang.String"/>
+	<field name="reimburse_biaya" class="java.lang.Integer"/>
+	<field name="reimburse_id_user" class="java.lang.String"/>
+	<field name="user_id_user" class="java.lang.String"/>
+	<field name="user_nama_user" class="java.lang.String"/>
+	<field name="user_username" class="java.lang.String"/>
+	<field name="user_password" class="java.lang.String"/>
+	<field name="user_no_telp" class="java.lang.String"/>
+	<field name="user_jabatan" class="java.lang.String"/>
+	<variable name="reimburse_biaya_1" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{reimburse_biaya}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="135" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="92e4637f-0908-44f2-9cdd-78f75c2c6fdb" x="0" y="0" width="555" height="135"/>
+			</rectangle>
+			<image>
+				<reportElement uuid="50219460-78f3-4b14-b446-86065d6faca0" x="0" y="0" width="136" height="135"/>
+				<imageExpression><![CDATA["C:\\Users\\lazua\\Documents\\NetBeansProjects\\kkp\\src\\kkp.img\\Logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="78108c3d-6ef8-4c84-bd08-7888176a780d" x="136" y="0" width="419" height="36" forecolor="#F80303"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT DAULAY SENTOSA MANDIRI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="98c65923-2bdb-4126-8e8b-c66fa375eb2d" x="136" y="36" width="419" height="41" forecolor="#00B90D"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat Medium" size="14"/>
+				</textElement>
+				<text><![CDATA[JASA PENGANGKUTAN & PENGELOLAAN LIMBAH / SAMPAH GEDUNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3e9000c9-b828-4290-a996-0115fcb374f3" x="136" y="77" width="419" height="28" forecolor="#00B90D"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<text><![CDATA[Jl. Mawar No. 29A Poltangan, Pasar Minggu - Jakarta Selatan Crown Palace Business Park Blok C 16-17]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3e9000c9-b828-4290-a996-0115fcb374f3" x="136" y="105" width="419" height="30" forecolor="#00B90D"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<text><![CDATA[Jl. Prof. Dr. Soepomo SH No. 231, Tebet - Jakarta Selatan Telp. 021 83787412 / 08210131607530]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="82" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="31949485-051e-4116-9b15-063b86754bb7" x="10" y="10" width="126" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Pegawai	:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e15de525-0b0d-4a50-8a75-07e039d20267" x="140" y="10" width="139" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{user_nama_user}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="55ff1352-0918-420a-9058-255c7f7c7920" x="10" y="40" width="126" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Invoice		:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e1f8cfef-3c50-4cfd-92fe-8ddd41dec064" x="140" y="40" width="139" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reimburse_id_inv}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="48" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="98b9f487-c834-422d-96cb-f54f71943802" x="0" y="0" width="120" height="48"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="d2fdaca6-4d85-4bcb-a499-23daa73d908e" x="10" y="10" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Reimbursement]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="98b9f487-c834-422d-96cb-f54f71943802" x="120" y="0" width="315" height="48"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="de617dfb-5b2c-4cf6-9650-19a32a48f2f0" x="130" y="10" width="295" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kegiatan]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="98b9f487-c834-422d-96cb-f54f71943802" x="435" y="0" width="120" height="48"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="5f540392-c23f-439c-b0af-0ba365907c9d" x="445" y="10" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Biaya]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="98b9f487-c834-422d-96cb-f54f71943802" x="0" y="0" width="120" height="40"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="ef400f02-22ab-4a7a-9047-22eec0d98359" x="10" y="10" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reimburse_id_reimburse}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="98b9f487-c834-422d-96cb-f54f71943802" x="120" y="0" width="315" height="40"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="df054bdd-36e4-4cfb-b156-e6854680d147" x="130" y="10" width="295" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reimburse_kegiatan}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="98b9f487-c834-422d-96cb-f54f71943802" x="435" y="0" width="120" height="40"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="b5e145be-f5ba-41ad-949b-b13cfc276ea0" x="445" y="10" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reimburse_biaya}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="166" splitType="Stretch">
+			<textField>
+				<reportElement uuid="55e2b48e-291d-4c38-aa75-fcb6e121049f" x="10" y="126" width="140" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{user_nama_user}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d2e7fe24-b16b-4bf2-ae6b-c3d50c05ad5a" x="369" y="126" width="176" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Rustaty Daulay]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="1e4d1494-412e-4248-96f1-6cd828c5cc23" x="369" y="10" width="176" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMMM yyyy",new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="40" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="39" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="ddc6b010-154d-4199-9086-debbc312445c" x="0" y="0" width="555" height="39"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="c1f21cf3-9e1a-4acf-99f2-ae23f12ab8b3" x="130" y="10" width="128" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Total Reimburse	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3ee463b4-fc61-43b5-81ef-2266b2f2f349" x="258" y="10" width="34" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Rp.]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="a3e0b479-2f12-4d38-8187-5fad57217541" x="292" y="10" width="133" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{reimburse_biaya_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

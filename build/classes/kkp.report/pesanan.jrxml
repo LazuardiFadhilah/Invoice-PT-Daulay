@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f03913b4-73e6-4ccd-bd4d-0f332aa8b33a">
+	<property name="ireport.zoom" value="1.9487171000000019"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="ID_INV" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     invoice.`id_inv` AS invoice_id_inv,
+     invoice.`jenis_limbah` AS invoice_jenis_limbah,
+     invoice.`berat_total` AS invoice_berat_total,
+     invoice.`id_customer` AS invoice_id_customer,
+     invoice.`total_harga` AS invoice_total_harga,
+     customer.`id_customer` AS customer_id_customer,
+     customer.`nama_customer` AS customer_nama_customer,
+     customer.`alamat_customer` AS customer_alamat_customer,
+     customer.`no_telp_customer` AS customer_no_telp_customer,
+     customer.`npwp` AS customer_npwp
+FROM
+     invoice JOIN customer ON invoice.id_customer = customer.id_customer WHERE invoice.id_inv = $P{ID_INV}]]>
+	</queryString>
+	<field name="invoice_id_inv" class="java.lang.String"/>
+	<field name="invoice_jenis_limbah" class="java.lang.String"/>
+	<field name="invoice_berat_total" class="java.lang.Integer"/>
+	<field name="invoice_id_customer" class="java.lang.String"/>
+	<field name="invoice_total_harga" class="java.lang.String"/>
+	<field name="customer_id_customer" class="java.lang.String"/>
+	<field name="customer_nama_customer" class="java.lang.String"/>
+	<field name="customer_alamat_customer" class="java.lang.String"/>
+	<field name="customer_no_telp_customer" class="java.lang.String"/>
+	<field name="customer_npwp" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="135" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="92e4637f-0908-44f2-9cdd-78f75c2c6fdb" x="0" y="0" width="555" height="135"/>
+			</rectangle>
+			<image>
+				<reportElement uuid="50219460-78f3-4b14-b446-86065d6faca0" x="0" y="0" width="136" height="135"/>
+				<imageExpression><![CDATA["C:\\Users\\lazua\\Documents\\NetBeansProjects\\kkp\\src\\kkp.img\\Logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="78108c3d-6ef8-4c84-bd08-7888176a780d" x="136" y="0" width="419" height="36" forecolor="#F80303"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT DAULAY SENTOSA MANDIRI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="98c65923-2bdb-4126-8e8b-c66fa375eb2d" x="136" y="36" width="419" height="41" forecolor="#00B90D"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat Medium" size="14"/>
+				</textElement>
+				<text><![CDATA[JASA PENGANGKUTAN & PENGELOLAAN LIMBAH / SAMPAH GEDUNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3e9000c9-b828-4290-a996-0115fcb374f3" x="136" y="77" width="419" height="28" forecolor="#00B90D"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<text><![CDATA[Jl. Mawar No. 29A Poltangan, Pasar Minggu - Jakarta Selatan Crown Palace Business Park Blok C 16-17]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3e9000c9-b828-4290-a996-0115fcb374f3" x="136" y="105" width="419" height="30" forecolor="#00B90D"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<text><![CDATA[Jl. Prof. Dr. Soepomo SH No. 231, Tebet - Jakarta Selatan Telp. 021 83787412 / 08210131607530]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="82" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="7956196e-890f-4a73-83ef-6c5ce0c49108" x="10" y="10" width="100" height="31"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Pesanan :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="fb585b8d-a9fc-473b-a8f9-ca6feeaeb675" x="110" y="10" width="100" height="31"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_id_inv}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="b99cf8ad-db18-4a24-8445-b258e8ea97d5" x="246" y="10" width="123" height="31"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<text><![CDATA[Nama Customer	:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="bf86363c-1e99-4ba2-9bce-349cb7ed312f" x="379" y="10" width="162" height="31"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_nama_customer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2f6572e7-b192-4c2c-b69b-692b8e11dea1" x="246" y="41" width="123" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<text><![CDATA[Alamat Customer 	:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="7b50dddb-05bd-4136-9697-041af37c060e" x="379" y="41" width="162" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_alamat_customer}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="47" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="a4b0b022-3ecd-4996-85a5-3f24d47e2e1c" x="0" y="0" width="176" height="47"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="4b8eb898-de97-44c2-a556-b90d3955c1a3" x="10" y="10" width="156" height="27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<text><![CDATA[Jenis Limbah]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="d962f179-1de4-4f5b-924e-0189e1153a82" x="176" y="0" width="257" height="47"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="a587710e-e5c3-4c09-bd46-52dc3f9a7794" x="190" y="10" width="233" height="27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<text><![CDATA[Berat Total / KG]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2fd73624-4ab0-4bc2-9a9e-b8b6e1068266" x="433" y="0" width="122" height="47"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="d8fab104-413d-4b60-8f1f-1a41bfd24881" x="445" y="10" width="100" height="27"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<text><![CDATA[Total Harga]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="2efb6516-460d-4171-b248-1f9e66d7ce89" x="0" y="0" width="176" height="40"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="d581fec4-ce74-4711-8a0e-08b34c97a0cc" x="10" y="10" width="156" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_jenis_limbah}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="2efb6516-460d-4171-b248-1f9e66d7ce89" x="176" y="0" width="257" height="40"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="763f45e0-25fa-4bac-86b3-a007b44fadf9" x="190" y="10" width="233" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_berat_total}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="2efb6516-460d-4171-b248-1f9e66d7ce89" x="433" y="0" width="122" height="40"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="44f5f868-6b50-4eab-ab7e-b33890ae2743" x="445" y="10" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_total_harga}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="130" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d2e7fe24-b16b-4bf2-ae6b-c3d50c05ad5a" x="369" y="77" width="176" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[RUSTATY DAULAY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="407d744f-7901-4cc2-9b1d-2378514edea0" x="369" y="97" width="176" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[PT. DAULAY SENTOSA MANDIRI]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="40" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="205" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="4beb20cb-bebe-495d-842f-d89717510abd" x="0" y="0" width="555" height="41"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="635af5aa-eb61-46f0-8207-c1fa6b9554cd" x="159" y="7" width="100" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Pembayaran :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ed69f538-fe51-47a5-b504-5d6e0acfb980" x="291" y="7" width="134" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoice_total_harga}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="3fbfeee4-0eb1-468c-a624-22c5a35d9530" x="259" y="7" width="32" height="28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rp. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ece340db-b742-4657-92a1-4563a3ac5fff" x="10" y="51" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<text><![CDATA[KETERANGAN :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e528fd3c-5d45-4141-8389-5011804909ca" x="10" y="73" width="200" height="53"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<text><![CDATA[Semua tagihan atas nama faktur yang dituju pembayaran dengan cek atau giro, belum dianggap lunas sebelum diuangkan atau di clearingkan oleh Bank kami.	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5f95efa1-b222-4758-b537-14eb29ce7b2b" x="350" y="51" width="195" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<text><![CDATA[Pembayaran Melalui Rekening Bank :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="115ba5c9-1eb7-4545-bf57-b81dd7880c35" x="350" y="73" width="195" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[a/n	: Rustaty Daulay]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="115ba5c9-1eb7-4545-bf57-b81dd7880c35" x="350" y="93" width="195" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[BCA	: 2211140901]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="115ba5c9-1eb7-4545-bf57-b81dd7880c35" x="350" y="113" width="195" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[BRI	: 0339-01-094875-50-1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="115ba5c9-1eb7-4545-bf57-b81dd7880c35" x="350" y="133" width="195" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Mandiri	: 070-00-0701630-1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="115ba5c9-1eb7-4545-bf57-b81dd7880c35" x="350" y="153" width="195" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[CIMB	: 744-01-00638-11-6]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

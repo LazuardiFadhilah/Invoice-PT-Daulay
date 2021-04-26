@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f03913b4-73e6-4ccd-bd4d-0f332aa8b33a">
+	<property name="ireport.zoom" value="1.9487171000000019"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     customer.`id_customer` AS customer_id_customer,
+     customer.`nama_customer` AS customer_nama_customer,
+     customer.`alamat_customer` AS customer_alamat_customer,
+     customer.`no_telp_customer` AS customer_no_telp_customer,
+     customer.`npwp` AS customer_npwp
+FROM
+     `customer` customer]]>
+	</queryString>
+	<field name="customer_id_customer" class="java.lang.String"/>
+	<field name="customer_nama_customer" class="java.lang.String"/>
+	<field name="customer_alamat_customer" class="java.lang.String"/>
+	<field name="customer_no_telp_customer" class="java.lang.String"/>
+	<field name="customer_npwp" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="135" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="92e4637f-0908-44f2-9cdd-78f75c2c6fdb" x="0" y="0" width="555" height="135"/>
+			</rectangle>
+			<image>
+				<reportElement uuid="50219460-78f3-4b14-b446-86065d6faca0" x="0" y="0" width="136" height="135"/>
+				<imageExpression><![CDATA["C:\\Users\\lazua\\Documents\\NetBeansProjects\\kkp\\src\\kkp.img\\Logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="78108c3d-6ef8-4c84-bd08-7888176a780d" x="136" y="0" width="419" height="36" forecolor="#F80303"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT DAULAY SENTOSA MANDIRI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="98c65923-2bdb-4126-8e8b-c66fa375eb2d" x="136" y="36" width="419" height="41" forecolor="#00B90D"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat Medium" size="14"/>
+				</textElement>
+				<text><![CDATA[JASA PENGANGKUTAN & PENGELOLAAN LIMBAH / SAMPAH GEDUNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3e9000c9-b828-4290-a996-0115fcb374f3" x="136" y="77" width="419" height="28" forecolor="#00B90D"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<text><![CDATA[Jl. Mawar No. 29A Poltangan, Pasar Minggu - Jakarta Selatan Crown Palace Business Park Blok C 16-17]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3e9000c9-b828-4290-a996-0115fcb374f3" x="136" y="105" width="419" height="30" forecolor="#00B90D"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<text><![CDATA[Jl. Prof. Dr. Soepomo SH No. 231, Tebet - Jakarta Selatan Telp. 021 83787412 / 08210131607530]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="79770762-46aa-4cdb-b7a6-64bfb8d936c2" x="0" y="0" width="555" height="49"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data Pelanggan PT DAULAY SENTOSA MANDIRI]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="2e1800bc-a090-4d65-9ac2-d0793642ab5b" x="0" y="0" width="81" height="27"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2e1800bc-a090-4d65-9ac2-d0793642ab5b" x="81" y="0" width="138" height="27"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2e1800bc-a090-4d65-9ac2-d0793642ab5b" x="219" y="0" width="131" height="27"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2e1800bc-a090-4d65-9ac2-d0793642ab5b" x="350" y="0" width="89" height="27"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2e1800bc-a090-4d65-9ac2-d0793642ab5b" x="439" y="0" width="116" height="27"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="c465a78b-8950-4e3f-960f-049747147b6d" x="0" y="0" width="81" height="27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0da1b728-7d7d-4e14-84f1-b63f6f8cb6ba" x="81" y="0" width="138" height="27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Customer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="858cea75-9b59-48eb-95cc-3e6d6442c601" x="219" y="0" width="131" height="27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat Customer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0035fec7-fc53-4642-990d-f96df42ee8c4" x="350" y="0" width="89" height="27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No Telpon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="94b477e5-c5b3-4154-be5d-7b77ceeb3ca6" x="439" y="0" width="116" height="27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NPWP]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="c6eb9c11-2381-49fb-a185-03179ef56f91" x="0" y="0" width="81" height="29"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="8f62cd10-1c2f-4183-af49-760609493624" x="0" y="0" width="81" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_id_customer}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="318ad89e-db3f-4107-b5fb-bc3336bc47f4" x="81" y="0" width="138" height="29"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="a78e756c-c3ad-4007-8b99-ebbb7e2211c4" stretchType="RelativeToBandHeight" x="91" y="0" width="117" height="29"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_nama_customer}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="2674df6e-c430-468f-a006-76ea4f887348" x="219" y="0" width="131" height="29"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="73cc6f22-4327-499b-8ef0-18c845813493" stretchType="RelativeToBandHeight" x="229" y="0" width="111" height="29"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_alamat_customer}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="28b70f9f-cc2c-42c1-889e-69749f745bd0" x="350" y="0" width="89" height="29"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="008de361-9f9c-4410-a11b-693255e1fcd1" x="350" y="0" width="89" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_no_telp_customer}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="46bae071-07dc-4dff-9ab7-fbdd2af458a7" x="439" y="0" width="116" height="29"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="1de0b260-5205-41e6-862f-f46eb977d922" x="449" y="0" width="100" height="29"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_npwp}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

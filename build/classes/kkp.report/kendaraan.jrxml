@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f03913b4-73e6-4ccd-bd4d-0f332aa8b33a">
+	<property name="ireport.zoom" value="2.3579476910000023"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="8"/>
+	<queryString>
+		<![CDATA[SELECT
+     mobil.`id_mobil` AS mobil_id_mobil,
+     mobil.`jenis_mobil` AS mobil_jenis_mobil,
+     mobil.`no_polis` AS mobil_no_polis
+FROM
+     `mobil` mobil]]>
+	</queryString>
+	<field name="mobil_id_mobil" class="java.lang.String"/>
+	<field name="mobil_jenis_mobil" class="java.lang.String"/>
+	<field name="mobil_no_polis" class="java.lang.String"/>
+	<variable name="mobil_id_mobil_1" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{mobil_id_mobil}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="135" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="92e4637f-0908-44f2-9cdd-78f75c2c6fdb" x="0" y="0" width="555" height="135"/>
+			</rectangle>
+			<image>
+				<reportElement uuid="50219460-78f3-4b14-b446-86065d6faca0" x="0" y="0" width="136" height="135"/>
+				<imageExpression><![CDATA["C:\\Users\\lazua\\Documents\\NetBeansProjects\\kkp\\src\\kkp.img\\Logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="78108c3d-6ef8-4c84-bd08-7888176a780d" x="136" y="0" width="419" height="36" forecolor="#F80303"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT DAULAY SENTOSA MANDIRI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="98c65923-2bdb-4126-8e8b-c66fa375eb2d" x="136" y="36" width="419" height="41" forecolor="#00B90D"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat Medium" size="14"/>
+				</textElement>
+				<text><![CDATA[JASA PENGANGKUTAN & PENGELOLAAN LIMBAH / SAMPAH GEDUNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3e9000c9-b828-4290-a996-0115fcb374f3" x="136" y="77" width="419" height="28" forecolor="#00B90D"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<text><![CDATA[Jl. Mawar No. 29A Poltangan, Pasar Minggu - Jakarta Selatan Crown Palace Business Park Blok C 16-17]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3e9000c9-b828-4290-a996-0115fcb374f3" x="136" y="105" width="419" height="30" forecolor="#00B90D"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="10"/>
+				</textElement>
+				<text><![CDATA[Jl. Prof. Dr. Soepomo SH No. 231, Tebet - Jakarta Selatan Telp. 021 83787412 / 08210131607530]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="79770762-46aa-4cdb-b7a6-64bfb8d936c2" x="0" y="0" width="555" height="49"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data Mobil Operasional PT DAULAY SENTOSA MANDIRI]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="720556e7-10fc-4da9-a6f1-f4a8f8ca1857" x="117" y="1" width="110" height="26"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="b59dd7f1-5277-4e9c-9dfe-9949c4987d76" x="136" y="0" width="81" height="27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Mobil]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="720556e7-10fc-4da9-a6f1-f4a8f8ca1857" x="227" y="1" width="120" height="26"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="82ef7115-7dd8-4a67-a690-0a0330dc03f8" x="238" y="0" width="99" height="27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jenis Mobil]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="720556e7-10fc-4da9-a6f1-f4a8f8ca1857" x="347" y="1" width="123" height="26"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="98993f63-0ebc-42ba-b404-6cb982494938" x="357" y="0" width="103" height="27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No Polis]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="a0d044d8-7f7d-4e10-93c1-f84c84627e12" x="117" y="0" width="110" height="29"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="867e78d1-14eb-4cc3-aa87-dd09cf2b601f" x="136" y="0" width="81" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mobil_id_mobil}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="22834de4-0b7a-413c-8f57-36bb4847f6c5" x="227" y="0" width="120" height="29"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="f51ecc3c-3da8-4173-bf24-c8cce7e61370" x="238" y="0" width="99" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mobil_jenis_mobil}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="65300db0-abed-4c29-a54c-960a0bb32c04" x="347" y="0" width="123" height="29"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="ae426ef6-c400-407f-a96b-a68cc31cdc36" x="357" y="0" width="103" height="29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mobil_no_polis}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="135">
+			<staticText>
+				<reportElement uuid="82d173b9-b02e-44b1-b121-ca2c4fe3d325" x="337" y="0" width="92" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fa60156c-ce45-4208-961d-bed024dceb19" x="369" y="115" width="186" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[(........................................)]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="7d2f9d3b-f49b-4f65-aa60-14ac1dcc13b3" x="439" y="0" width="116" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMMM yyyy",new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="32"/>
+	</pageFooter>
+	<summary>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="125659a8-5bb7-44e0-8bdf-06710944ad58" x="10" y="10" width="163" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat" size="12"/>
+				</textElement>
+				<text><![CDATA[Total mobil yang dimiliki :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="bd1ccbec-2f14-40c0-9e9f-abaf16482d29" x="173" y="10" width="44" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Montserrat" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{mobil_id_mobil_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d74aec65-73bf-4903-afaf-0f3de4bdd5b9" x="217" y="10" width="87" height="30"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Montserrat" size="12"/>
+				</textElement>
+				<text><![CDATA[Mobil]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
